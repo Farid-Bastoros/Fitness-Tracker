@@ -1,0 +1,87 @@
+.container {
+    position: relative;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(270deg, #00c6ff, #0072ff, #ff6a88, #00c6ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .header {
+    margin-top: 40px;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 90%;
+    margin-top: 40px;
+  }
+  
+  .feature {
+    background: rgba(21, 21, 174, 0.949);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .feature:hover {
+    transform: scale(1.05);
+  }
+  
+  .featureTitle {
+    font-size: 1.5rem;
+  }
+  
+  /* Styles for input fields */
+  input, textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #0072ff;
+    outline: none;
+  }
+  

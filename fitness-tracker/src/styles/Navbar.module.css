@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #1a1a1a; 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .brand {
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    color: #ffffff; 
+    text-transform: uppercase; 
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navLink {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .navLink:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+  }
+  

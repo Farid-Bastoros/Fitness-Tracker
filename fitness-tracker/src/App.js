@@ -6,6 +6,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

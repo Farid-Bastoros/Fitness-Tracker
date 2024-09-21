@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase';
-import './Navbar.css';
+import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -16,19 +16,29 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav>
-      <h2>Fitness Tracker</h2>
-      <ul>
-        <li><Link to="/">Home</Link></li>
+    <nav className={styles.navbar}>
+      <h2 className={styles.brand}>Fitness Tracker</h2>
+      <ul className={styles.navLinks}>
+        <li>
+          <Link className={styles.navLink} to="/">Home</Link>
+        </li>
         {isAuthenticated ? (
           <>
-            <li><Link to="/dashboard">Dashboard</Link></li>
-            <li><Link to="/" onClick={() => auth.signOut()}>Logout</Link></li>
+            <li>
+              <Link className={styles.navLink} to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link className={styles.navLink} to="/" onClick={() => auth.signOut()}>Logout</Link>
+            </li>
           </>
         ) : (
           <>
-            <li><Link to="/signup">Sign Up</Link></li>
-            <li><Link to="/login">Login</Link></li>
+            <li>
+              <Link className={styles.navLink} to="/signup">Sign Up</Link>
+            </li>
+            <li>
+              <Link className={styles.navLink} to="/login">Login</Link>
+            </li>
           </>
         )}
       </ul>
